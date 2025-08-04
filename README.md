@@ -1,139 +1,85 @@
-🥗 AI Agent for Nutrition & Diet Advice
-An intelligent nutrition assistant powered by IBM Watsonx.ai and Granite Foundation Model, designed to provide users with healthy diet recommendations, meal plans, calorie info, hydration tips, and general well-being advice — all simulated without external APIs.
+# 🥗 AI Nutrition Assistant
 
-🧠 Technologies Used
-IBM Watsonx.ai Studio
+An AI-powered virtual assistant that provides healthy diet plans, food suggestions, hydration tips, and wellness advice — all simulated using **IBM Watsonx.ai** and **Granite Foundation Model**. Designed to help users make informed nutrition choices with simple, friendly, multilingual responses.
 
-IBM Granite Foundation Model (granite-13b-chat or granite-3-8b-instruct)
+---
 
-IBM Cloud Object Storage
+## 🧠 Technologies Used
 
-☁️ IBM Cloud Services
-Watsonx.ai Agent Lab
+- IBM Watsonx.ai Studio  
+- IBM Granite Foundation Model (`granite-13b-chat` / `granite-3-8b-instruct`)  
+- IBM Cloud Object Storage  
 
-IBM Granite Model
+---
 
-IBM Cloud Lite Account
+## ☁️ IBM Cloud Services
 
-IBM Cloud Object Storage
+- Watsonx.ai Agent Lab  
+- IBM Granite Model  
+- IBM Cloud Lite Account (Free Tier)  
+- IBM Cloud Object Storage  
 
-🚀 Setup Instructions
-✅ 1. Access Watsonx.ai
-Log in at IBM Cloud
+---
 
-Navigate to Watsonx > Watsonx.ai
+## 🧱 Project Setup
 
-✅ 2. Open Agent Lab
-Go to Gen AI > Automating Tasks > Agent Lab
+### ✅ Step 1: Access Watsonx.ai
+- Visit [IBM Cloud](https://cloud.ibm.com)
+- Go to **Watsonx > Watsonx.ai**
 
-Click Create New Project
+### ✅ Step 2: Create Agent Project
+- Navigate to **Gen AI > Automating Tasks > Agent Lab**
+- Click **Create New Project**
+- Project Name: `Nutrition Assistant`
+- Attach Cloud Object Storage when prompted
 
-Project Name: Nutrition Assistant
+### ✅ Step 3: Build Agent
+- Go to **Chat and Build** tab
+- Click **Associate Service** → Create or link `watsonx.ai Runtime`
+- Choose model: `granite-13b-chat` or `granite-3-8b-instruct`
 
-Add Cloud Object Storage when prompted
+---
 
-✅ 3. Build the Chat Agent
-Inside your project, click Chat and Build
+## 💬 Agent Instructions
 
-Create or associate watsonx.ai Runtime service
+> “Hi! I’m your Nutrition Assistant. Ask me anything about healthy eating, balanced diets, calories, or hydration!”
 
-Select model: granite-13b-chat or granite-3-8b-instruct
+### The agent should:
+- Recommend diet plans for weight loss, weight gain, or maintenance
+- Provide nutritional info on common foods (fruits, vegetables, grains, etc.)
+- Suggest balanced meals (veg or non-veg)
+- Give hydration and wellness advice
+- Explain everything in clear, simple language
 
-💬 Agent Instructions (Example)
-Hi! I'm your Nutrition Assistant. I can help you with healthy food advice, diet plans, and hydration tips. Just ask!
+⚠️ **Note**: Agent uses simulated knowledge. No real-time API or data fetching.
 
-Your AI should:
+---
 
-Provide balanced diet plans (veg/non-veg)
+## 🧪 Deployment Instructions
 
-Suggest meals for weight loss, gain, or maintenance
+### ✅ Step 1: Save and Deploy
+- Click **Save as Agent**
+- Click **Deploy** → Generate API Key
 
-Recommend hydration and wellness tips
+### ✅ Step 2: Create Deployment Space
+- Click **New Deployment Space**
+- Name it: `Nutrition Assistant Deployment`
+- Add `watsonx.ai` service
 
-Offer nutritional info on common foods
+### ✅ Step 3: Deploy Agent
+- Select your agent → Confirm → Click **Deploy**
 
-Use simple, friendly language
-
-Assume users may be beginners or non-experts
-
-Simulate knowledge — no external APIs or live data
-
-💡 Sample Prompts
-"What should I eat for a protein-rich vegetarian breakfast?"
-
-"Give me a 1500-calorie meal plan."
-
-"How much water should I drink daily?"
-
-"Is banana good for weight loss?"
-
-"Suggest a balanced diet for a diabetic person."
-
-🧪 Deployment
-✅ 1. Save and Deploy
-Click Save Agent
-
-Deploy the agent and generate API key
-
-✅ 2. Create Deployment Space
-Create a new space: Nutrition Agent Deployment
-
-Associate your Watsonx.ai Runtime
-
-Deploy the agent into this space
-
-✅ 3. Test the API
-Use tools like Postman or Curl to test:
-
-json
-Copy
-Edit
+### ✅ Step 4: Test API (Optional)
+You can test via Postman or any client:
+```json
 {
   "messages": [
     {
       "role": "user",
-      "content": "Suggest a healthy dinner for someone trying to lose weight."
+      "content": "Give me a 1500-calorie vegetarian meal plan."
     }
   ]
 }
-👤 Target Audience
-Health-conscious individuals
 
-People with dietary goals (weight loss/gain)
-
-Students or professionals seeking wellness tips
-
-Beginners needing simple diet help
-
-🌟 Key Features
-🥗 Meal suggestions for various health goals
-
-💧 Hydration guidance
-
-🍓 Nutrition facts for common foods
-
-🧠 Simple, non-technical answers
-
-💬 Multilingual capability (if extended with model prompts)
-
-🔗 Useful Resources
-IBM Cloud Lite Account
-
-Watsonx.ai Studio
-
-Granite Model Info
-
-🔮 Future Scope
-🗣️ Voice interface for accessibility
-
-📸 Food photo recognition with multimodal models
-
-📅 Personalized daily nutrition tracking
-
-🧾 Diet journal integration
-
-🌍 Regional diet adaptation (e.g., Indian thali, Mediterranean, etc.)
-
-Built with ❤️ using IBM Watsonx.ai + Granite to support healthier living through AI.
 
 
